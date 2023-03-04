@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="JSON Formatter">
+        <div class="slds-p-horizontal_medium">
+        <lightning-textarea  placeholder="Enter your JSON here..."  onchange={handleChange}>
+        </lightning-textarea>
+        <div class="slds-align_absolute-center" style="height:5rem">
+           
+            <lightning-button  label="Format Json" type="submit" onclick={handleClick}></lightning-button>
+           
+        </div>
+        <lightning-textarea  lwc:ref="outputArea"  value={output} read-only="true" 
+        placeholder="Your JSON will appear here..."></lightning-textarea>
+    </div>
+    </lightning-card>
+</template>
